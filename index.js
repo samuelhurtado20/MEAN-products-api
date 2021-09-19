@@ -1,11 +1,14 @@
 const express = require("express");
 const conDb = require("./config/db");
+const cors = require("cors");
 
 // server
 const app = express();
 
 // db
 conDb();
+
+app.use(cors());
 
 app.use(express.json());
 
